@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru"> <!-- самый главный тег -->
+<head> <!-- скрытая часть страницы, где хронятся даннаные о ней: автор, описание, кодировка и т.п. -->
+    <meta charset="UTF-8"> <!-- кодировка страницы. Указывается, чтобы на сайте не появлялись всякие крякозябры. -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- для совместимости с IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- для красивого и правильного отображения на телефонах -->
+    <title>Помошник консультанта</title> <!-- название стараницы -->
+    <meta name="author" content="SergeyBocharov"> <!-- автор страницы -->
+    <meta name="description" content="Помошник для консультанта в клубе. Помогает вести учёт и бугалтерию"> <!-- описание страницы -->
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul class="menu">
+                    <li class="menu_item"><a href="#" class="menu_link">Создать чек</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">Статистика</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">Лист цен</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">Купоны и подарки</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">Список клиентов</a></li>
+                    <li class="menu_item"><a href="#" class="menu_link">БД чеков</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="promo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                    <h1 class="promo_header">АССИСТЕНТ КОНСУЛЬТАНТА</h1>
+                    <h2 class="promo_subheader">КЛУБА ПРАВИЛЬНОГО ПИТАНИЯ</h2>
+
+                    <form>
+                        <div class="form_bg">
+                            <div class="form_client_inf">
+                                <div class="form_box">
+                                    <div class="form_label">
+                                    <input type="date" class="form_date" id="date_check" placeholder="" value="">
+                                    <label for="date_check">Дата</label>
+                                    </div>
+                                </div>
+                
+                                <div class="form_box">
+                                    <div class="form_label">
+                                    <select class="form_client" id="client" aria-label="client">
+                                        <option selected>Бочаров Сергей</option>
+                                        <option value="">Трапезникова Лариса</option>
+                                    </select>
+                                    <label for="client">Имя клиента</label>
+                                    </div>
+                                </div>
+                
+                                <div class="form_box">
+                                    <input type="radio" class="btn_checkbox" name="discount" id="no-discount" autocomplete="off" checked>
+                                    <label class="btn" for="no-discount">Без скидки</label>
+                
+                                    <input type="radio" class="btn_checkbox" name="discount" id="15-discount" autocomplete="off">
+                                    <label class="btn" for="15-discount">15%</label>
+                
+                                    <input type="radio" class="btn_checkbox" name="discount" id="25-discount" autocomplete="off">
+                                    <label class="btn" for="25-discount">25%</label>
+                
+                                    <input type="radio" class="btn_checkbox" name="discount" id="35-discount" autocomplete="off">
+                                    <label class="btn" for="35-discount">35%</label>
+                                </div>
+                
+                                <div class="form_box form_cpn">
+                                    <div class="form_label">
+                                    <input type="text" class="form_coupon" id="coupon_sum" placeholder="1" value="">
+                                    <label for="coupon_sum">Купон</label>
+                                    </div>
+                
+                                    <input type="checkbox" class="btn_checkbox" id="coupon"  autocomplete="off">
+                                    <label class="btn btn_coupon" for="coupon">Применить купон</label>
+                                </div>
+                            </div>
+                
+                            <div class="form_check">
+                                <div class="form_ordering">
+                                    <div class="form_box close_box">
+                                        <a href="#" class="close"></a>
+                                        <div class="form_subbox1">
+                                            <div class="form_label">
+                                            <select class="form_product" id="product-1" aria-label="product-1">
+                                                <option selected>Коктейль Формула1</option>
+                                                <option value="">Коктейль Формула1</option>
+                                                <option value="">Травяной напиток 50 г.</option>
+                                                <option value="">Алоэ</option>
+                                            </select>
+                                            <label for="product-1">1 позиция</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <input type="text" class="form_count" id="cout-1" placeholder="1" value="">
+                                            <label for="count-1">Кол.</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <select class="form_measure" id="measure-1" aria-label="measure-1">
+                                                <option selected>Штук</option>
+                                                <option value="">Порций</option>
+                                                <option value="">Ложек</option>
+                                            </select>
+                                            <label for="measure-1">Ед. изм.</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_subbox2">2531 руб.</div>
+                                    </div>
+                                    <div class="form_box close_box">
+                                        <a href="#" class="close"></a>
+                                        <div class="form_subbox1">
+                                            <div class="form_label">
+                                            <select class="form_product" id="product-1" aria-label="product-1">
+                                                <option selected>Коктейль Формула1</option>
+                                                <option value="">Коктейль Формула1</option>
+                                                <option value="">Травяной напиток 50 г.</option>
+                                                <option value="">Алоэ</option>
+                                            </select>
+                                            <label for="product-1">1 позиция</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <input type="text" class="form_count" id="cout-1" placeholder="1" value="">
+                                            <label for="count-1">Кол.</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <select class="form_measure" id="measure-1" aria-label="measure-1">
+                                                <option selected>Штук</option>
+                                                <option value="">Порций</option>
+                                                <option value="">Ложек</option>
+                                            </select>
+                                            <label for="measure-1">Ед. изм.</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_subbox2">2531 руб.</div>
+                                    </div>
+                                    <div class="form_box close_box">
+                                        <a href="#" class="close"></a>
+                                        <div class="form_subbox1">
+                                            <div class="form_label">
+                                            <select class="form_product" id="product-1" aria-label="product-1">
+                                                <option selected>Коктейль Формула1</option>
+                                                <option value="">Коктейль Формула1</option>
+                                                <option value="">Травяной напиток 50 г.</option>
+                                                <option value="">Алоэ</option>
+                                            </select>
+                                            <label for="product-1">1 позиция</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <input type="text" class="form_count" id="cout-1" placeholder="1" value="">
+                                            <label for="count-1">Кол.</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <select class="form_measure" id="measure-1" aria-label="measure-1">
+                                                <option selected>Штук</option>
+                                                <option value="">Порций</option>
+                                                <option value="">Ложек</option>
+                                            </select>
+                                            <label for="measure-1">Ед. изм.</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_subbox2">2531 руб.</div>
+                                    </div>
+                                    <div class="form_box close_box">
+                                        <a href="#" class="close"></a>
+                                        <div class="form_subbox1">
+                                            <div class="form_label">
+                                            <select class="form_product" id="product-1" aria-label="product-1">
+                                                <option selected>Коктейль Формула1</option>
+                                                <option value="">Коктейль Формула1</option>
+                                                <option value="">Травяной напиток 50 г.</option>
+                                                <option value="">Алоэ</option>
+                                            </select>
+                                            <label for="product-1">1 позиция</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <input type="text" class="form_count" id="cout-1" placeholder="1" value="">
+                                            <label for="count-1">Кол.</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <select class="form_measure" id="measure-1" aria-label="measure-1">
+                                                <option selected>Штук</option>
+                                                <option value="">Порций</option>
+                                                <option value="">Ложек</option>
+                                            </select>
+                                            <label for="measure-1">Ед. изм.</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_subbox2">2531 руб.</div>
+                                    </div>
+                                    <div class="form_box close_box">
+                                        <a href="#" class="close"></a>
+                                        <div class="form_subbox1">
+                                            <div class="form_label">
+                                            <select class="form_product" id="product-1" aria-label="product-1">
+                                                <option selected>Коктейль Формула1</option>
+                                                <option value="">Коктейль Формула1</option>
+                                                <option value="">Травяной напиток 50 г.</option>
+                                                <option value="">Алоэ</option>
+                                            </select>
+                                            <label for="product-1">1 позиция</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <input type="text" class="form_count" id="cout-1" placeholder="1" value="">
+                                            <label for="count-1">Кол.</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <select class="form_measure" id="measure-1" aria-label="measure-1">
+                                                <option selected>Штук</option>
+                                                <option value="">Порций</option>
+                                                <option value="">Ложек</option>
+                                            </select>
+                                            <label for="measure-1">Ед. изм.</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_subbox2">2531 руб.</div>
+                                    </div>
+                                    <div class="form_box close_box">
+                                        <a href="#" class="close"></a>
+                                        <div class="form_subbox1">
+                                            <div class="form_label">
+                                            <select class="form_product" id="product-1" aria-label="product-1">
+                                                <option selected>Коктейль Формула1</option>
+                                                <option value="">Коктейль Формула1</option>
+                                                <option value="">Травяной напиток 50 г.</option>
+                                                <option value="">Алоэ</option>
+                                            </select>
+                                            <label for="product-1">1 позиция</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <input type="text" class="form_count" id="cout-1" placeholder="1" value="">
+                                            <label for="count-1">Кол.</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <select class="form_measure" id="measure-1" aria-label="measure-1">
+                                                <option selected>Штук</option>
+                                                <option value="">Порций</option>
+                                                <option value="">Ложек</option>
+                                            </select>
+                                            <label for="measure-1">Ед. изм.</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_subbox2">2531 руб.</div>
+                                    </div>
+                                    <div class="form_box close_box">
+                                        <a href="#" class="close"></a>
+                                        <div class="form_subbox1">
+                                            <div class="form_label">
+                                            <select class="form_product" id="product-1" aria-label="product-1">
+                                                <option selected>Коктейль Формула1</option>
+                                                <option value="">Коктейль Формула1</option>
+                                                <option value="">Травяной напиток 50 г.</option>
+                                                <option value="">Алоэ</option>
+                                            </select>
+                                            <label for="product-1">1 позиция</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <input type="text" class="form_count" id="cout-1" placeholder="1" value="">
+                                            <label for="count-1">Кол.</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <select class="form_measure" id="measure-1" aria-label="measure-1">
+                                                <option selected>Штук</option>
+                                                <option value="">Порций</option>
+                                                <option value="">Ложек</option>
+                                            </select>
+                                            <label for="measure-1">Ед. изм.</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_subbox2">2531 руб.</div>
+                                    </div>
+                                    <div class="form_box close_box">
+                                        <a href="#" class="close"></a>
+                                        <div class="form_subbox1">
+                                            <div class="form_label">
+                                            <select class="form_product" id="product-1" aria-label="product-1">
+                                                <option selected>Коктейль Формула1</option>
+                                                <option value="">Коктейль Формула1</option>
+                                                <option value="">Травяной напиток 50 г.</option>
+                                                <option value="">Алоэ</option>
+                                            </select>
+                                            <label for="product-1">1 позиция</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <input type="text" class="form_count" id="cout-1" placeholder="1" value="">
+                                            <label for="count-1">Кол.</label>
+                                            </div>
+                
+                                            <div class="form_label">
+                                            <select class="form_measure" id="measure-1" aria-label="measure-1">
+                                                <option selected>Штук</option>
+                                                <option value="">Порций</option>
+                                                <option value="">Ложек</option>
+                                            </select>
+                                            <label for="measure-1">Ед. изм.</label>
+                                            </div>
+                                        </div>
+                                        <div class="form_subbox2">2531 руб.</div>
+                                    </div>
+                                </div>
+                                <div class="form_result"></div>
+                            </div>
+                        </div>
+                
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="container">
+            <form>
+            <div class="row">
+                <div class="col-md-10 offset-md-1">
+                <h2 class="statistics_header">СТАТИСТИКА</h2>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4 offset-md-1">
+                    <div class="form_label">
+                        <select class="form_period" id="product-1" aria-label="product-1">
+                            <option selected>Месяц</option>
+                            <option value="">День</option>
+                            <option value="">Неделя</option>
+                            <option value="">Год</option>
+                            <option value="">Всё время</option>
+                        </select>
+                        <label for="product-1">Период</label>
+                    </div>
+                </div>
+                <div class="col-md-6 statistics_period">
+                    <div class="form_label">
+                        <input type="date" class="form_date" id="date_check" placeholder="" value="">
+                        <label for="date_check">С</label>
+                    </div>
+                    <div class="dash">—</div>
+                    <div class="form_label">
+                        <input type="date" class="form_date" id="date_check" placeholder="" value="">
+                        <label for="date_check">До</label>
+                    </div>
+                </div>
+            </div>
+            </form>
+        </div>
+    </section>
+   
+
+    <footer class="footer">
+        <div class="container">
+            <div class="contact">Телефон для консультации: <a href="tel:+79227585852">8 922 758 58 52</a></div>
+        </div>
+    </footer>
+    
+</body>
+</html>
